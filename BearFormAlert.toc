@@ -1,0 +1,15 @@
+## Interface: 120000,120001,120005,120007
+## Title: BearFormAlert
+## Notes: Alerts you if you are not in Bear Form while in combat as a Guardian Druid.
+## Author: Antigravity
+## Version: 1.0.0
+## SavedVariables: BearFormAlertDB
+## IconTexture: Interface\Icons\Ability_Druid_Ironfur
+## X-Curse-Project-ID: 1466991
+
+embeds.xml
+
+Locales\enUS.lua
+core.lua
+config.lua
+alert.lua
