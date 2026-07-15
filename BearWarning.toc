@@ -5,7 +5,7 @@
 ## Version: 1.0.0
 ## SavedVariables: BearWarningDB
 ## IconTexture: Interface\Icons\Ability_Druid_Ironfur
-## X-Curse-Project-ID: 
+## X-Curse-Project-ID: 1610817
 
 embeds.xml
 
