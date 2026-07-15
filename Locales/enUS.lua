@@ -1,10 +1,10 @@
 local ADDON_NAME, addon = ...
 local L = LibStub("AceLocale-3.0"):NewLocale(ADDON_NAME, "enUS", true)
 
-L["WelcomeMessage"] = "|cff00ff00" .. ADDON_NAME .. "|r loaded. Use |cff00ff00/bfa|r or |cff00ff00/bearformalert|r to open settings."
+L["WelcomeMessage"] = "|cff00ff00" .. ADDON_NAME .. "|r loaded. Use |cff00ff00/bw|r or |cff00ff00/bearwarning|r to open settings."
 L["GeneralSettings"] = "General Settings"
 L["EnableAddon"] = "Enable Addon"
-L["EnableAddonDesc"] = "Enable or disable BearFormAlert."
+L["EnableAddonDesc"] = "Enable or disable Bear Warning."
 L["LockFrame"] = "Lock Frame"
 L["LockFrameDesc"] = "Lock the alert frame position to prevent dragging."
 L["GuardianOnly"] = "Guardian Spec Only"

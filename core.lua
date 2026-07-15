@@ -91,12 +91,12 @@ end
 
 -- Native Database initialization (removes dependency on AceDB-3.0)
 function addon:InitializeDB()
-    if type(_G.BearFormAlertDB) ~= "table" then
-        _G.BearFormAlertDB = {}
+    if type(_G.BearWarningDB) ~= "table" then
+        _G.BearWarningDB = {}
     end
     
     self.db = {
-        profile = _G.BearFormAlertDB
+        profile = _G.BearWarningDB
     }
     
     -- Set defaults
@@ -129,9 +129,9 @@ function addon:OnInitialize()
     self:SetupOptions()
     
     -- Register slash commands natively
-    SLASH_BearFormAlert1 = "/bfa"
-    SLASH_BearFormAlert2 = "/bearformalert"
-    SlashCmdList["BearFormAlert"] = function()
+    SLASH_BearWarning1 = "/bw"
+    SLASH_BearWarning2 = "/bearwarning"
+    SlashCmdList["BearWarning"] = function()
         addon:ToggleConfig()
     end
     

@@ -27,7 +27,7 @@ end
 
 function addon:SetupOptions()
     local options = {
-        name = "BearFormAlert",
+        name = "Bear Warning",
         type = "group",
         args = {
             general = {
