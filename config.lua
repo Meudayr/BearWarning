@@ -142,7 +142,7 @@ function addon:SetupOptions()
                         name = "Reset Settings",
                         desc = "Reset all settings to default values.",
                         func = function()
-                            _G.BearFormAlertDB = {}
+                            _G.BearWarningDB = {}
                             addon:InitializeDB()
                             addon:UpdateAlertSettings()
                             addon:Print("Settings reset to defaults.")

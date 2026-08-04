@@ -1,11 +1,11 @@
-## X-Curse-Project-ID: 1610817
-## Interface: 120000,120001,120005,120007
+## Interface: 120000,120001,120005,120007,120100
 ## Title: Bear Warning
 ## Notes: Alerts you if you are not in Bear Form while in combat as a Guardian Druid.
 ## Author: Meudayr
-## Version: 1.0.0
+## Version: 1.0.1
 ## SavedVariables: BearWarningDB
 ## IconTexture: Interface\Icons\Ability_Druid_Ironfur
+## X-Curse-Project-ID: 1610817
 
 embeds.xml
 

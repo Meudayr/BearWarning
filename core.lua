@@ -128,10 +128,10 @@ function addon:OnInitialize()
     -- Setup configuration options
     self:SetupOptions()
     
-    -- Register slash commands natively
-    SLASH_BearWarning1 = "/bw"
-    SLASH_BearWarning2 = "/bearwarning"
-    SlashCmdList["BearWarning"] = function()
+    -- Register slash commands natively (must be uppercase for WoW ChatFrame)
+    SLASH_BEARWARNING1 = "/bw"
+    SLASH_BEARWARNING2 = "/bearwarning"
+    SlashCmdList["BEARWARNING"] = function()
         addon:ToggleConfig()
     end
     
@@ -141,20 +141,33 @@ end
 
 -- Open/Close Config Panel
 function addon:ToggleConfig()
-    if not self.optionsCategoryId then return end
-    
     if Settings and Settings.OpenToCategory then
-        local category
-        pcall(function() category = Settings.GetCategory(self.optionsCategoryId) end)
-        
-        local success
-        if category then
-            success = pcall(Settings.OpenToCategory, category)
+        if self.optionsCategoryId then
+            local category = Settings.GetCategory(self.optionsCategoryId)
+            if category then
+                local success = pcall(Settings.OpenToCategory, category:GetID())
+                if success then return end
+            end
+            local success = pcall(Settings.OpenToCategory, self.optionsCategoryId)
+            if success then return end
         end
-        if not success then
-            pcall(Settings.OpenToCategory, self.optionsCategoryId)
+        if self.optionsFrame and self.optionsFrame.name then
+            local category = Settings.GetCategory(self.optionsFrame.name)
+            if category then
+                local success = pcall(Settings.OpenToCategory, category:GetID())
+                if success then return end
+            end
+            local success = pcall(Settings.OpenToCategory, self.optionsFrame.name)
+            if success then return end
         end
-    elseif self.optionsFrame then
-        pcall(InterfaceOptionsFrame_OpenToCategory, self.optionsFrame)
+    end
+    if self.optionsFrame then
+        local success = pcall(InterfaceOptionsFrame_OpenToCategory, self.optionsFrame)
+        if success then return end
+    end
+    -- Fallback to AceConfigDialog standalone frame
+    local AceConfigDialog = LibStub and LibStub("AceConfigDialog-3.0", true)
+    if AceConfigDialog then
+        AceConfigDialog:Open(ADDON_NAME)
     end
 end

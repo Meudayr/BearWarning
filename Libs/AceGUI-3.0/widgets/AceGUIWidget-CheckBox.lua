@@ -15,6 +15,12 @@ local CreateFrame, UIParent = CreateFrame, UIParent
 --[[-----------------------------------------------------------------------------
 Support functions
 -------------------------------------------------------------------------------]]
+local function SetDesaturation(texture, desaturation)
+	if texture and texture.SetDesaturated then
+		texture:SetDesaturated(desaturation)
+	end
+end
+
 local function AlignImage(self)
 	local img = self.image:GetTexture()
 	self.text:ClearAllPoints()
