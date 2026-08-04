@@ -134,9 +134,6 @@ function addon:OnInitialize()
     SlashCmdList["BEARWARNING"] = function()
         addon:ToggleConfig()
     end
-    
-    -- Print welcome message
-    self:Print(L["WelcomeMessage"])
 end
 
 -- Open/Close Config Panel
