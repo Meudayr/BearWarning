@@ -17,3 +17,6 @@ ehthumbs.db
 
 # Release archives
 *.zip
+
+# Agent rules and configuration
+.agents/

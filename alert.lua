@@ -424,15 +424,15 @@ function addon:UpdateAlertSettings()
     local stateString
     if self.isTestMode then
         if db.guardianOnly then
-            stateString = "[combat,spec:3,noform:1] show; [combat] hide; show"
+            stateString = "[canexitvehicle][vehicleui][overridebar][possessbar][petbattle] hide; [combat,spec:3,noform:1] show; [combat] hide; show"
         else
-            stateString = "[combat,noform:1] show; [combat] hide; show"
+            stateString = "[canexitvehicle][vehicleui][overridebar][possessbar][petbattle] hide; [combat,noform:1] show; [combat] hide; show"
         end
     else
         if db.guardianOnly then
-            stateString = "[combat,spec:3,noform:1] show; hide"
+            stateString = "[canexitvehicle][vehicleui][overridebar][possessbar][petbattle] hide; [combat,spec:3,noform:1] show; hide"
         else
-            stateString = "[combat,noform:1] show; hide"
+            stateString = "[canexitvehicle][vehicleui][overridebar][possessbar][petbattle] hide; [combat,noform:1] show; hide"
         end
     end
     
@@ -444,15 +444,15 @@ function addon:UpdateAlertSettings()
         local bindState
         if db.guardianOnly then
             if self.isTestMode then
-                bindState = "[combat,spec:3,noform:1] active; [nocombat,noform:1] active; inactive"
+                bindState = "[canexitvehicle][vehicleui][overridebar][possessbar][petbattle] inactive; [combat,spec:3,noform:1] active; [nocombat,noform:1] active; inactive"
             else
-                bindState = "[combat,spec:3,noform:1] active; inactive"
+                bindState = "[canexitvehicle][vehicleui][overridebar][possessbar][petbattle] inactive; [combat,spec:3,noform:1] active; inactive"
             end
         else
             if self.isTestMode then
-                bindState = "[noform:1] active; inactive"
+                bindState = "[canexitvehicle][vehicleui][overridebar][possessbar][petbattle] inactive; [noform:1] active; inactive"
             else
-                bindState = "[combat,noform:1] active; inactive"
+                bindState = "[canexitvehicle][vehicleui][overridebar][possessbar][petbattle] inactive; [combat,noform:1] active; inactive"
             end
         end
         

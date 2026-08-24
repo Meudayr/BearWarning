@@ -2,7 +2,7 @@
 ## Title: Bear Warning
 ## Notes: Alerts you if you are not in Bear Form while in combat as a Guardian Druid.
 ## Author: Meudayr
-## Version: 1.0.2
+## Version: 1.0.3
 ## SavedVariables: BearWarningDB
 ## IconTexture: Interface\Icons\Ability_Druid_Ironfur
 ## X-Curse-Project-ID: 1610817
